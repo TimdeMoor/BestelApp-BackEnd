@@ -34,8 +34,11 @@ public class BestellingContainer {
     }
 
     public List<Dish> getOrderDishes(Long id){
+        //TODO:Fix
         return null;
     }
+
+    public Bestelling getSingle(Long id){ return repo.getById(id); }
 
     @Transactional
     public void complete(long id){

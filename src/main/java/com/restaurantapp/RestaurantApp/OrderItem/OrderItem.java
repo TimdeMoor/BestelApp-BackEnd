@@ -23,12 +23,21 @@ public class OrderItem {
     Long dishId;
     Long orderId;
     Integer amount;
+    String opmerking;
 
     public OrderItem(){}
+
+    public OrderItem(Long dishId, Long orderId, Integer amount, String opmerking) {
+        this.dishId = dishId;
+        this.orderId = orderId;
+        this.amount = amount;
+        this.opmerking = opmerking;
+    }
 
     public OrderItem(Long dishId, Long orderId, Integer amount) {
         this.dishId = dishId;
         this.orderId = orderId;
         this.amount = amount;
+        this.opmerking = null;
     }
 }

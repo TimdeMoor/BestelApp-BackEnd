@@ -22,8 +22,8 @@ public class BestellingController {
     }
 
     @GetMapping(path = "{OrderId}/dishes")
-    public List<Dish> getOrderDishes(){
-        return null;
+    public List<Dish> getOrderDishes(@PathVariable("OrderId") Long id){
+        return container.getOrderDishes(id);
     }
 
     @PostMapping
@@ -45,4 +45,7 @@ public class BestellingController {
     public List<Bestelling> getIncomplete(){
         return container.getIncomplete();
     }
+
+    @GetMapping(path = "{OrderId}")
+    public Bestelling getBestelling(@PathVariable("OrderId") Long id){ return container.getSingle(id);}
 }

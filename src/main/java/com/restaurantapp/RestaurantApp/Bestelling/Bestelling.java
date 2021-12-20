@@ -2,6 +2,7 @@ package com.restaurantapp.RestaurantApp.Bestelling;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.restaurantapp.RestaurantApp.Dish.Dish;
+import com.restaurantapp.RestaurantApp.OrderItem.OrderItem;
 
 import javax.persistence.*;
 import java.util.List;
@@ -25,9 +26,9 @@ public class Bestelling {
     Double totalPrice;
     boolean isComplete;
 
-
-    public Bestelling(Long tableId) {
+    public Bestelling(Long tableId, boolean isComplete) {
         this.tableId = tableId;
+        this.isComplete = false;
     }
     public Bestelling(){}
 

@@ -20,10 +20,10 @@ public class DishController {
         return container.getAll();
     }
 
-    //@GetMapping(path = "{dishId}")
-    //public Dish getSingle(@PathVariable("dishId") Long id){
-    //    return container.getSingle(id);
-    //}
+    @GetMapping(path = "{dishId}")
+    public Dish getSingle(@PathVariable("dishId") Long id){
+        return container.getSingle(id);
+    }
 
     @PostMapping
     public void add(@RequestBody Dish dish) {

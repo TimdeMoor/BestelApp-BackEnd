@@ -12,11 +12,11 @@ public class OrderItemConfig {
         return args -> {
             repo.save(new OrderItem(1L, 1L, 2));
             repo.save(new OrderItem(2L, 2L, 1));
-            repo.save(new OrderItem(2L, 1L, 3));
-            repo.save(new OrderItem(1L, 1L, 6));
+            repo.save(new OrderItem(2L, 1L, 3, "Extra saus"));
+            repo.save(new OrderItem(1L, 3L, 6, "Vegetarisch"));
             repo.save(new OrderItem(3L, 2L, 1));
-            repo.save(new OrderItem(1L, 1L, 3));
-            repo.save(new OrderItem(3L, 2L, 2));
+            repo.save(new OrderItem(2L, 3L, 3));
+            repo.save(new OrderItem(1L, 2L, 2));
         };
     }
 }

@@ -29,4 +29,9 @@ public class OrderItemController {
     public void delete(@PathVariable("id") Long id){
         container.delete(id);
     }
+
+    @GetMapping(path = "{orderId}")
+    public List<OrderItem> getByOrderId(@PathVariable("orderId") Long id){
+        return container.getByOrderId(id);
+    }
 }

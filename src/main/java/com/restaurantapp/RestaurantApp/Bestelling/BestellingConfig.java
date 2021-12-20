@@ -9,15 +9,11 @@ public class BestellingConfig {
     @Bean
     CommandLineRunner BestellingCommandLineRunner(BestellingRepository repo) {
         return args -> {
-            repo.save(new Bestelling(1L));
-            repo.save(new Bestelling(2L));
-            repo.save(new Bestelling(3L));
-            repo.save(new Bestelling(4L));
-            repo.save(new Bestelling(5L));
-
-            Bestelling test = new Bestelling(1L);
-            test.Complete();
-            repo.save(test);
+            repo.save(new Bestelling(1L, false));
+            repo.save(new Bestelling(2L, false));
+            repo.save(new Bestelling(3L, false));
+            repo.save(new Bestelling(4L, false));
+            repo.save(new Bestelling(5L, false));
         };
     }
 }

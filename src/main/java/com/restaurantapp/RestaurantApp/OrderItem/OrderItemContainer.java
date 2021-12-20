@@ -25,4 +25,8 @@ public class OrderItemContainer {
     public void delete(Long id){
         repo.deleteById(id);
     }
+
+    public List<OrderItem> getByOrderId(Long id){
+        return repo.getOrderItemByOrderId(id);
+    }
 }

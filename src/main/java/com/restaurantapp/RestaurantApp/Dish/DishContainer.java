@@ -22,9 +22,9 @@ public class DishContainer {
         return repo.findAll();
     }
 
-    //public Dish getSingle(Long id){
-    //    return repo.getById(id);
-    //}
+    public Dish getSingle(Long id){
+        return repo.getSingle(id);
+    }
 
     public void add(Dish dish) {
         repo.save(dish);
