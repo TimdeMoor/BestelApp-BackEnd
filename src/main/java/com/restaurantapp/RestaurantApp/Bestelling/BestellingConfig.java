@@ -9,11 +9,10 @@ public class BestellingConfig {
     @Bean
     CommandLineRunner BestellingCommandLineRunner(BestellingRepository repo) {
         return args -> {
+            repo.deleteAll(); //TODO:Weghalen
             repo.save(new Bestelling(1L, false));
             repo.save(new Bestelling(2L, false));
             repo.save(new Bestelling(3L, false));
-            repo.save(new Bestelling(4L, false));
-            repo.save(new Bestelling(5L, false));
         };
     }
 }

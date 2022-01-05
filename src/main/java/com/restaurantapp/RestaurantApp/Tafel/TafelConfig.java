@@ -10,6 +10,7 @@ public class TafelConfig {
     @Bean
     CommandLineRunner TafelCommandLineRunner(TafelRepository repo) {
         return args -> {
+            repo.deleteAll(); //TODO:Weghalen
             repo.save(new Tafel(2));
             repo.save(new Tafel(2));
             repo.save(new Tafel(4));

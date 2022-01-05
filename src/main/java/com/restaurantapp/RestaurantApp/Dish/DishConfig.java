@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DishConfig {
     @Bean
-    CommandLineRunner DishCommandLineRunner(DishRepository repository) {
+    CommandLineRunner DishCommandLineRunner(DishRepository repo) {
         return args -> {
             Dish kroket = new Dish(
                     "Kroket",
@@ -21,9 +21,10 @@ public class DishConfig {
                     "Kip",
                     3.50
             );
-            repository.save(kroket);
-            repository.save(frikandel);
-            repository.save(kip);
+            repo.deleteAll(); //TODO:Weghalen
+            repo.save(kroket);
+            repo.save(frikandel);
+            repo.save(kip);
         };
     }
 }

@@ -10,6 +10,7 @@ public class OrderItemConfig {
     @Bean
     CommandLineRunner OrderItemCommandLineRunner(OrderItemRepository repo) {
         return args -> {
+            repo.deleteAll(); //TODO:Weghalen
             repo.save(new OrderItem(1L, 1L, 2));
             repo.save(new OrderItem(2L, 2L, 1));
             repo.save(new OrderItem(2L, 1L, 3, "Extra saus"));
