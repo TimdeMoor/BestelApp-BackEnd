@@ -27,9 +27,9 @@ class BestellingRepositoryTest {
         //Arrange
         //Setup testData
         Bestelling stubBestelling1 = new Bestelling(1L, false);
-        Bestelling stubBestelling2 = new Bestelling(2L, true);
+        Bestelling stubBestelling2 = new Bestelling(2L, false);
         Bestelling stubBestelling3 = new Bestelling(3L, false);
-        Bestelling stubBestelling4 = new Bestelling(4L, true);
+        Bestelling stubBestelling4 = new Bestelling(4L, false);
 
         //Insert testdata in table
         underTest.save(stubBestelling1);

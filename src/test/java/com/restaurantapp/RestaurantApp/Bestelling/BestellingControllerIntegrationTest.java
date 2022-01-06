@@ -17,7 +17,6 @@ public class BestellingControllerIntegrationTest {
     private TestRestTemplate testRestTemplate;
 
     @Test
-    @Sql(value = "/test.sql")
     public void getSingleTest(){
 
         ResponseEntity<Bestelling> response = testRestTemplate.getForEntity("http://localhost:8080/api/v1/orders/1", Bestelling.class);
