@@ -40,7 +40,9 @@ class BestellingRepositoryTest {
         //Define expected result
         List<Bestelling> expected = new ArrayList<>();
         expected.add(stubBestelling1);
+        expected.add(stubBestelling2);
         expected.add(stubBestelling3);
+        expected.add(stubBestelling4);
 
         //Act
         List<Bestelling> results = underTest.getIncomplete();
