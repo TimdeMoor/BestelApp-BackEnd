@@ -20,6 +20,7 @@ public class OrderItem {
             generator = "order_sequence"
     )
     private Long id;
+
     Long dishId;
     Long orderId;
     Integer amount;

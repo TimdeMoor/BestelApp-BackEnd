@@ -12,16 +12,7 @@ import java.util.List;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class Bestelling {
     @Id
-    @SequenceGenerator(
-            name = "bestelling_sequence",
-            sequenceName = "bestelling_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "bestelling_sequence"
-    )
-    private Long id;
+    Long id;
     Long tableId;
     Double totalPrice;
     boolean isComplete;

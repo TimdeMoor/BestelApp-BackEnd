@@ -21,8 +21,8 @@ public class BestellingContainer {
         return repo.findAll();
     }
 
-    public void add(Bestelling o){
-        repo.save(o);
+    public void add(Bestelling b){
+        repo.save(b);
     }
 
     public void delete(long id){

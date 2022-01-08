@@ -1,5 +1,6 @@
 package com.restaurantapp.RestaurantApp.OrderItem;
 
+import com.restaurantapp.RestaurantApp.Dish.Dish;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class OrderItemController {
     }
 
     @PostMapping
-    public void add(OrderItem orderItem) {
+    public void add(@RequestBody OrderItem orderItem) {
         container.add(orderItem);
     }
 
