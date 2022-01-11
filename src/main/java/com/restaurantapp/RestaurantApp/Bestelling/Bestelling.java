@@ -21,6 +21,13 @@ public class Bestelling {
         this.tableId = tableId;
         this.isComplete = false;
     }
+
+    public Bestelling(Long id, Long tableId, boolean isComplete) {
+        this.id = id;
+        this.tableId = tableId;
+        this.isComplete = false;
+    }
+
     public Bestelling(){}
 
     public void Complete(){
